@@ -1,0 +1,26 @@
+{
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
+    },
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all",
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+    "editor.codeActionsOnSaveTimeout": 300,
+    "editor.tabSize": 2,
+    "git.ignoreLimitWarning": true
+}

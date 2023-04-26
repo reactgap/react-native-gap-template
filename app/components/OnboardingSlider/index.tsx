@@ -13,7 +13,7 @@ import Animated, {
 import Slider, { SLIDE_HEIGHT, BORDER_RADIUS } from './Slider';
 import Subslide from './Subslide';
 import Dot from './Dot';
-import { makeStyles, Theme, useTheme } from '../theme';
+import { makeStyles, Theme } from '../theme';
 
 const { width } = Dimensions.get('window');
 
@@ -25,14 +25,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   slider: {
     height: SLIDE_HEIGHT,
+    backgroundColor: theme.colors.background,
     borderBottomRightRadius: theme.borderRadii.xl,
     borderBottomLeftRadius: theme.borderRadii.xl,
   },
   footerContent: {
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: 'white',
-    borderTopLeftRadius: theme.borderRadii.xl,
+    backgroundColor: theme.colors.background,
   },
   footer: {
     flex: 1,
@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   underlay: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end',
-    overflow: 'hidden',
+    borderBottomRightRadius: theme.borderRadii.xl,
+    borderBottomLeftRadius: theme.borderRadii.xl,
   },
 }));
 
@@ -74,8 +75,6 @@ interface Props {
 const OnboardingSlider = ({ nextTitle, discoverTitle, onDiscoverPress, sliders }: Props) => {
   // variable
   const styles = useStyles();
-  const theme = useTheme();
-
   const scroll = useRef<Animated.ScrollView>(null);
   const x = useSharedValue(0);
 
@@ -115,6 +114,7 @@ const OnboardingSlider = ({ nextTitle, discoverTitle, onDiscoverPress, sliders }
             );
             return {
               opacity: opacity,
+              overflow: 'hidden',
             };
           });
 
@@ -127,7 +127,7 @@ const OnboardingSlider = ({ nextTitle, discoverTitle, onDiscoverPress, sliders }
                   ...StyleSheet.absoluteFillObject,
                   width: width,
                   height: (width * picture.height) / picture.width,
-                  borderBottomRightRadius: theme.borderRadii.xl,
+                  overflow: 'hidden',
                 }}
               />
             </Animated.View>

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'center',
     padding: 44,
     width,
-    backgroundColor: theme.colors.background,
+    overflow: 'hidden',
   },
   subtitle: {
     textAlign: 'center',

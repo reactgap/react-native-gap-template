@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Dimensions, View } from 'react-native';
-import { Text } from '../../theme';
+import { Text, theme } from '../../theme';
 
 interface SliderProps {
   title?: string;

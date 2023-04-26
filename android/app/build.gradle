@@ -1,5 +1,4 @@
 apply plugin: "com.android.application"
-apply plugin: 'com.google.gms.google-services'
 apply plugin: "com.facebook.react"
 
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
@@ -98,7 +97,7 @@ android {
     namespace "com.template"
     defaultConfig {
         applicationId "com.template"
-        resValue "string", "build_config_package", "com.reactgap.example"
+        resValue "string", "build_config_package", "com.template"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

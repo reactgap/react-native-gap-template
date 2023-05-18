@@ -9,7 +9,6 @@ import reducers, { auth } from './reducers';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas/rootSaga';
 
-console.log('aaaaaa', Config.KEYCHAIN_IOS);
 const storage = createSensitiveStorage({
   keychainService: Config.KEYCHAIN_IOS || 'secureKey',
   sharedPreferencesName: Config.SHARED_PERFERENCE_ANDROID || 'SecurePrefs',

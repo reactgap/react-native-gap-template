@@ -1,15 +1,20 @@
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
+  env: {
+    production: {
+      plugins: ['transform-remove-console'], //removing consoles.log from app during release (production) versions
+    },
+  },
   plugins: [
     'react-native-reanimated/plugin',
     [
       'module-resolver',
       {
-        root: ['./app'],
+        root: ['./src'],
         extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
         alias: {
-          components: './app/components',
-          containers: './app/containers',
+          components: './src/components',
+          containers: './src/containers',
         },
       },
     ],

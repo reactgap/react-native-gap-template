@@ -24,9 +24,9 @@ Some common Ruby version manager are:
 
 - CocoaPods is one of the dependency management system available for iOS
 
-### Init React Native
+### Run iOS
 ```
-npx react-native init ProjectName --version 0.71.3
+yarn ios
 ```
 ### Android
 
